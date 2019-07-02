@@ -1,7 +1,28 @@
+<h1>Meal Planner</h1>
+
+<h2>Remaining suggestions</h2>
 <ul>
-  {{#each model as |meal|}}
-    <li>{{meal.name}}</li>
+  {{#each remainingSuggestions as |meal|}}
+    <li>
+      {{meal.name}}
+    </li>
   {{/each}}
 </ul>
 
-{{outlet}}
+<h2>Chosen meals</h2>
+<ul>
+  {{#each chosenMeals as |meal|}}
+    <li>
+      {{meal.name}}
+    </li>
+  {{/each}}
+</ul>
+
+<h2>Rejected meals</h2>
+<ul>
+  {{#each rejectedMeals as |meal|}}
+    <li>
+      {{meal.name}}
+    </li>
+  {{/each}}
+</ul>
