@@ -1,9 +1,13 @@
 <h1>Meal Planner</h1>
 
-<h2>All meals</h2>
+<h2>Remaining suggestions</h2>
 <ul>
-  {{#each allMeals as |meal|}}
-    <li>{{meal.name}}</li>
+  {{#each remainingSuggestions as |meal|}}
+    <li>
+      <span>{{meal.name}}</span>
+      <button onclick={{action "pick" meal}}>Pick</button>
+      <button onclick={{action "reject" meal}}>Reject</button>
+    </li>
   {{/each}}
 </ul>
 
@@ -17,13 +21,6 @@
 <h2>Rejected meals</h2>
 <ul>
   {{#each rejectedMeals as |meal|}}
-    <li>{{meal.name}}</li>
-  {{/each}}
-</ul>
-
-<h2>Remaining suggestions</h2>
-<ul>
-  {{#each remainingSuggestions as |meal|}}
     <li>{{meal.name}}</li>
   {{/each}}
 </ul>
